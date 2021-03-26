@@ -4,14 +4,16 @@ export const Greetings = () => // named export, forces us to use same name acros
 // using arrow function
 {
     const isMorning = (new Date()).getHours() < 12;
-    const greetingHeader = isMorning ? ( //react fragments <></>
-        <> 
-            <h3>Good morning</h3> 
-            <p> some new line</p>
-        </>
+    const greetingHeader = isMorning ? ( 
+          <h3>Good morning</h3> 
         )
         : <h3>Good evening</h3>;
-    return  greetingHeader; 
+    return ( //react fragments <></>
+    <> 
+        {greetingHeader}
+        <p> some new line</p>
+    </>
+        ) ; 
 }
 
 //export default Greetings; 
