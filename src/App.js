@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import './Greetings'
-import Greetings from './Greetings';
+import {Greetings} from './Greetings'; // after using named export we need to use {}
 
 
 function App() {
