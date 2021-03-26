@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Greetings></Greetings>
+        <Greetings name="Shaun" numberOfMessages={5}></Greetings>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           This is so {adjective} !!! <code>src/App.js</code> and save to reload.
