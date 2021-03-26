@@ -12,8 +12,9 @@ export const Greetings = ({name, numberOfMessages}) => //(props) => // named exp
     return ( //react fragments <></>
     <> 
         {greetingHeader}
-        {numberOfMessages === 0 ? "empty" :
-        <p> some new line {numberOfMessages}</p>}
+        {numberOfMessages === 0 || <p> some new line {numberOfMessages}</p> }
+        {/* {numberOfMessages === 0 ? "empty" :
+        <p> some new line {numberOfMessages}</p>} */}
     </>
         ) ; 
 }
