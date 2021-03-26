@@ -3,6 +3,7 @@ import React from 'react';
 export const Greetings = ({name, numberOfMessages}) => //(props) => // named export, forces us to use same name across the file
 // using arrow function
 {
+    //console.log('rendering greetings')
     //const {name, numberOfMessages} = props;
     const isMorning = (new Date()).getHours() < 12;
     const greetingHeader = isMorning ? ( 
