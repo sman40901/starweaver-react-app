@@ -27,6 +27,7 @@ export const CounterButton = ({numberOfClicks, increment}) => //(props) => // na
         // that is done by passing array , if that value changes then useEffect is triggered
         // if we pass empty array it is called only once at the beginning
         console.log('use effect, counter button');
+        // [danger] increment(); dont do anything that will change the state of the dependencies 
     }, [numberOfClicks]);
 
     return(
