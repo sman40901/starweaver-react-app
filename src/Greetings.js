@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function Greetings() // named export, forces us to use same name across the file
+export const Greetings = () => // named export, forces us to use same name across the file
 {
     const isMorning = (new Date()).getHours() < 12;
     return  isMorning ? ( //react fragments <></>
