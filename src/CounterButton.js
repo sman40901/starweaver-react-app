@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 
+
 // {useState} -> hooks
 // const arr = [1,2,3];
 // const [x,y,z] = arr;
@@ -7,8 +8,8 @@ import React, {useEffect} from 'react';
 export const CounterButton = ({numberOfClicks, increment}) => //(props) => // named export, forces us to use same name across the file
 // using arrow function
 {
-
     //console.log('rendering counter button');
+
 
     // state var numberOfClicks, setNumberOfClicks is the function to set that state
   
@@ -32,6 +33,7 @@ export const CounterButton = ({numberOfClicks, increment}) => //(props) => // na
 
     return(
     <>
+    
     <p>You've clicked {numberOfClicks} times</p>
     <button onClick={increment}>Click me!</button>
     </>

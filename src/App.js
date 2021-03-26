@@ -1,44 +1,44 @@
 import React from 'react';
 import './App.css';
-import './Greetings'
-import {Greetings} from './Greetings'; // after using named export we need to use {}
-import {PeopleList} from './PeopleList';
+// import './Greetings'
+import {PageNotFound} from './pages/PageNotFound';
+import {HomePage} from './pages/HomePage'; // after using named export we need to use {}
+import {PeopleListPage} from './pages/PeopleListPage';
 
-import {CounterButton} from './CounterButton';
-import {CongratulationsMessage} from './CongratulationsMessage'
-import {useState} from 'react';
+import {CounterButtonPage} from './pages/CounterButtonPage';
+//import {CongratulationsMessage} from './PeopleListPage'
+// import {useState} from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 //import {PeopleListItem} from './PeopleListItem'
 
 // hoisting the state 
 
 
-const people =[{
-  name : 'Ho',
-  age : 40,
-  hair : 'brown'
-},{
-  name : 'John',
-  age : 45,
-  hair : 'black'
-}];
 
 
 function App() {
-  
-  const [numberOfClicks, setNumberOfClicks] = useState(0); // using array destructuring syntax, 
-
-  const increment = () =>{
-      setNumberOfClicks(numberOfClicks + 1);
-  }
-
-  return (
+  return(
     <div className="App">
-      <header className="App-header">
-          <CongratulationsMessage threshold={10} numberOfClicks={numberOfClicks}/>
-          <CounterButton numberOfClicks={numberOfClicks} increment={increment}/>
+      <header className='App-header'>
+        <BrowserRouter>
+          {/* <Route path="/">
+            <HomePage/>
+          </Route> */}
+          <Switch>
+          <Route path="/counter">
+            <CounterButtonPage/>
+          </Route>
+          <Route path="/peopleList">
+            <PeopleListPage/>
+          </Route>
+          <Route path="/" exact>
+            <HomePage/>
+          </Route>
+          </Switch>
+        </BrowserRouter>
       </header>
     </div>
   );
+  
 }
-
 export default App;
