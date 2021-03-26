@@ -1,18 +1,19 @@
 import React from 'react';
 
-export const Greetings = (props) => // named export, forces us to use same name across the file
+export const Greetings = ({name, numberOfMessages}) => //(props) => // named export, forces us to use same name across the file
 // using arrow function
 {
-    console.log(props);
+    //const {name, numberOfMessages} = props;
     const isMorning = (new Date()).getHours() < 12;
     const greetingHeader = isMorning ? ( 
-          <h3>Good morning {props.name}</h3> 
+          <h3>Good morning {name}</h3> 
         )
-        : <h3>Good evening {props.name}</h3>;
+        : <h3>Good evening {name}</h3>;
     return ( //react fragments <></>
     <> 
         {greetingHeader}
-        <p> some new line {props.numberOfMessages}</p>
+        {numberOfMessages === 0 ? "empty" :
+        <p> some new line {numberOfMessages}</p>}
     </>
         ) ; 
 }
