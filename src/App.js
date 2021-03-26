@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import './Greetings'
+import Greetings from './Greetings';
 
 
 function App() {
-  const isMorning = (new Date()).getHours() < 12;
-  const greetingElement = isMorning ? <h3>Good morning</h3> : <h3>Good evening</h3>;
+
 
   const adjective = 'cool';
   const url = "https://reactjs.org";
@@ -12,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {greetingElement}
+        <Greetings></Greetings>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           This is so {adjective} !!! <code>src/App.js</code> and save to reload.
