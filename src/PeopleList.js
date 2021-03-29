@@ -4,9 +4,9 @@ import {PeopleListItem} from './PeopleListItem'
 // numbers.map(x=>x*2);
 // ---> [2,4,6]
 
-export const PeopleList = ({person}) => {
+export const PeopleList = ({people}) => {
     return (
 
-        <PeopleListItem person={person} key={person.name} />
+        <PeopleListItem people={people} />
 );
 }

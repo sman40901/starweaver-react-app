@@ -15,8 +15,8 @@ const people =[{
   export const PeopleListPage = () => {
       return(
       <>
-      <h1>Poep</h1>
-      <PeopleList/>
+      <h3>Person</h3>
+      <PeopleList people={{people}}/>
       </>
       );
   }

@@ -34,6 +34,9 @@ function App() {
           <Route path="/" exact>
             <HomePage/>
           </Route>
+          <Route>
+            <PageNotFound/>
+          </Route>
           </Switch>
         </BrowserRouter>
       </header>
