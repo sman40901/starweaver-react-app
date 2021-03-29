@@ -6,7 +6,8 @@ import {PeopleListItem} from './PeopleListItem'
 
 export const PeopleList = ({people}) => {
     return (
-
+        <>
         <PeopleListItem people={people} />
+        </>
 );
 }

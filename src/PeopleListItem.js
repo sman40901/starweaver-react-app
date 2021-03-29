@@ -1,14 +1,14 @@
 import React from 'react';
 
 export const PeopleListItem = ({people}) => {
-    return(
-        <>
-       { people.map( person => (
-        <div className = "list-item-container" key = {person.name}>
-            <h3>{person.name}</h3>
-            <p>age: {person.age}</p>
-            <p>hari color: {person.hair}</p>
+     return(
+        <div className="people">
+            { people.map(user => (
+            <div className="person" key={user.id}>
+                {user.name}
+                <p>{user.hair}</p>
+            </div>
+            ))}
         </div>
-       ))}</>
     );
  }

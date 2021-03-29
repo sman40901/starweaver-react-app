@@ -4,11 +4,18 @@ import {PeopleList} from '../PeopleList'
 const people =[{
     name : 'Ho',
     age : 40,
-    hair : 'brown'
+    hair : 'brown',
+    id:1
   },{
     name : 'John',
     age : 45,
-    hair : 'black'
+    hair : 'black',
+    id:2
+  },{
+    name : 'Jack',
+    age : 46,
+    hair : 'black',
+    id:3
   }];
   
 
