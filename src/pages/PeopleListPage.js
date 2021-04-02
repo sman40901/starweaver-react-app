@@ -23,7 +23,7 @@ const people =[{
       return(
       <>
       <h3>Person</h3>
-      <PeopleList people={{people}}/>
+      <PeopleList people={people}/>
       </>
       );
   }
